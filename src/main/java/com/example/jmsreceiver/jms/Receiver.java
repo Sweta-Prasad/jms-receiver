@@ -62,5 +62,5 @@ public class Receiver {
 //-----Topic(pub-sub)---
 //-1: Asynchronous receive - the receiver subscribes for topic(and is active), then sender sends many messages. It will receive all the
 //                           messages which were sent after tat subscription, provided the receive is active.
-//-2: Synchronous receive - the receiver subscribes for topic(and is active), then sends many messages. it will receive only
+//-2: Synchronous receive - the receiver subscribes for topic(and is active), then sender sends many messages. it will receive only
 //                           1 message which was sent after tat subscription(and not all), provided the receiver is active.
