@@ -10,7 +10,6 @@ import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.stereotype.Component;
 
 import javax.jms.Message;
-import javax.rmi.CORBA.PortableRemoteObjectDelegate;
 import java.util.concurrent.CountDownLatch;
 
 @Component
