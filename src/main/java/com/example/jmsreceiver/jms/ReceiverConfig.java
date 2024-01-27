@@ -59,7 +59,7 @@ public class ReceiverConfig {
     */
 
     @Bean
-    MessageConverter converter(){
+    MessageConverter converter() {
         return new SimpleMessageConverter();
     }
 

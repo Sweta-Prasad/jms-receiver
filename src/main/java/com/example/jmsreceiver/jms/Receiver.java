@@ -28,11 +28,12 @@ public class Receiver {
 //        return latch;
 //    }
 
-    @JmsListener(destination = "temp")  //asynchronous receiver(need not be present at the time of message send). Create a message
-    public void receive(Product message){ //listener container behind the scenes for each annotated method, using a JmsListenerContainerFactory
-                                            //By default, a bean with name jmsListenerContainerFactory is expected by the @JmsListener annotation
+    @JmsListener(destination = "temp")
+    //asynchronous receiver(need not be present at the time of message send). Create a message
+    public void receive(Product message) { //listener container behind the scenes for each annotated method, using a JmsListenerContainerFactory
+        //By default, a bean with name jmsListenerContainerFactory is expected by the @JmsListener annotation
         LOGGER.info("received message='{}'", message);
-       // latch.countDown();
+        // latch.countDown();
     }
 
 
@@ -53,7 +54,7 @@ public class Receiver {
 }
 
 //----Queue(point-to-point)---
-    //-- there is only 1 client for each message.
+//-- there is only 1 client for each message.
 //-1: Asynchronous receive - the sender sends many messages to queue and when the receiver appln starts, it receives all the messages.
 //-2: Synchronous receive - the sender sends many messages to queue and when receiver appln starts, it receives 1 message, then it
 //                           starts again and receives 2nd message etc.
